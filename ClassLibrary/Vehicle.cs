@@ -25,15 +25,7 @@ namespace ClassLibrary
         /// and a boolen value if brobizz was used or not.
         /// </summary>
         /// <returns>a double value, the price of the ticket.</returns>
-        public double Price(double ticketPrice, bool brobizz)
-        {
-            if (brobizz==true)
-            {
-                return Math.Round(ticketPrice * 0.95,2);
-            }
-
-            return ticketPrice;
-        }
+        public abstract double Price();
         /// <summary>
         /// A method that returns the type of the vehicle. It takes no parameters.
         /// </summary>
@@ -58,9 +50,23 @@ namespace ClassLibrary
 
             }
             throw new ArgumentException("The inserted License Plate is too short.");
+        }
 
+        /// <summary>
+        /// Method that checks if it's possible to give BroBizzDiscount.
+        /// if it is returns the discounted price
+        /// </summary>
+        /// <param name="defaultPrice"></param>
+        /// <param name="brobizz"></param>
+        /// <returns>returns a double value</returns>
+        public double CheckBroBizzDiscount(double defaultPrice, bool brobizz)
+        {
+            if (brobizz == true)
+            {
+                return Math.Round(defaultPrice * 0.95, 2);
+            }
 
-
+            return defaultPrice;
         }
     }
 }

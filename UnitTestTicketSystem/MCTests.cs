@@ -15,7 +15,11 @@ namespace UnitTestTicketSystem
             //Arrange
             Vehicle motorC = new MC();
             //Act
-            var actualPrice = motorC.Price(125,false);
+            var actualPrice = motorC.Price();
+            var BroBizz = true;
+
+                motorC.CheckBroBizzDiscount(actualPrice,BroBizz);
+            
             double expectedPrice = 125;
             //Assert
             Assert.AreEqual(expectedPrice, actualPrice);

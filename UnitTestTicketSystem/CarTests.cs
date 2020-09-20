@@ -8,15 +8,15 @@ namespace UnitTestTicketSystem
     public class CarTests
     {
         [DataTestMethod]
-        [DataRow(228,240,true)]
-        [DataRow(300, 300, false)]
-        [DataRow(475, 500, true)]
-        public void PriceTest(double expectedPrice, double defaultPrice, bool brobizz)
+        [DataRow(228,true)]
+        [DataRow(240, false)]
+        public void PriceTest(double expectedPrice, bool brobizz)
         {
             //Arrange
             Vehicle car = new Car();
             //Act
-            var actualPrice = car.Price(defaultPrice,brobizz);
+            var actualPrice = car.Price();
+            actualPrice = car.CheckBroBizzDiscount(actualPrice, brobizz);
             //Assert
             Assert.AreEqual(expectedPrice, actualPrice);
         }

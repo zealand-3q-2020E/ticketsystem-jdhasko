@@ -10,6 +10,11 @@ namespace ClassLibrary
     public class MC : Vehicle
     {
 
+        /// <summary>
+        /// A method that returns the price of the ticket. It takes no parameters.
+        /// </summary>
+        /// <returns>a double value, the price of the ticket.</returns>
+        public override double Price() => 125;
 
         /// <summary>
         /// A method that returns the type of the vehicle. It takes no parameters.
