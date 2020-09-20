@@ -10,6 +10,12 @@
             It contains two methods. Price, and VehicleType.
             </summary>
         </member>
+        <member name="M:ClassLibrary.Car.Price">
+            <summary>
+            A method that returns the price of the ticket. It takes no parameters. Declared in the parent class: Vehicle
+            </summary>
+            <returns>a double value, the price of the ticket.</returns>
+        </member>
         <member name="M:ClassLibrary.Car.VehicleType">
             <summary>
             A method that returns the type of the vehicle. It takes no parameters. Declared in the parent class: Vehicle;
@@ -20,6 +26,12 @@
             <summary>
             This class represents a MotorCycle. It has a LicencePlate and a Date property and a Price and a Type method.
             </summary>
+        </member>
+        <member name="M:ClassLibrary.MC.Price">
+            <summary>
+            A method that returns the price of the ticket. It takes no parameters.
+            </summary>
+            <returns>a double value, the price of the ticket.</returns>
         </member>
         <member name="M:ClassLibrary.MC.VehicleType">
             <summary>
@@ -44,10 +56,9 @@
             Date of passing the bridge.
             </summary>
         </member>
-        <member name="M:ClassLibrary.Vehicle.Price(System.Double,System.Boolean)">
+        <member name="M:ClassLibrary.Vehicle.Price">
             <summary>
-            A method that returns the price of the ticket. Takes 2 parameters, the basic price of the ticket
-            and a boolen value if brobizz was used or not.
+            A method that returns the price of the ticket. Takes no paramaters.
             </summary>
             <returns>a double value, the price of the ticket.</returns>
         </member>
@@ -63,6 +74,15 @@
             </summary>
             <param name="insertedLicensePlate"></param>
             <returns>Returns a true value if the license plate is correct.</returns>
+        </member>
+        <member name="M:ClassLibrary.Vehicle.CheckBroBizzDiscount(System.Double,System.Boolean)">
+            <summary>
+            Method that checks if it's possible to give BroBizzDiscount.
+            if it is returns the discounted price
+            </summary>
+            <param name="defaultPrice"></param>
+            <param name="brobizz"></param>
+            <returns>returns a double value</returns>
         </member>
     </members>
 </doc>

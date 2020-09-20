@@ -8,6 +8,9 @@
     <Reference Include="ClassLibrary">
       <HintPath>ExternalDLLs\ClassLibrary.dll</HintPath>
     </Reference>
+    <Reference Include="ClassLibrary">
+      <HintPath>ExternalDLLs\ClassLibrary.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
