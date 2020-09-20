@@ -21,8 +21,7 @@ namespace ClassLibrary
         public DateTime Date { get; set; }
 
         /// <summary>
-        /// A method that returns the price of the ticket. Takes 2 parameters, the basic price of the ticket
-        /// and a boolen value if brobizz was used or not.
+        /// A method that returns the price of the ticket. Takes no paramaters.
         /// </summary>
         /// <returns>a double value, the price of the ticket.</returns>
         public abstract double Price();
