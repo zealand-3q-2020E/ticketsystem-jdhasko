@@ -13,9 +13,9 @@ namespace UnitTestTicketSystem
         public void PriceTest()
         {
             //Arrange
-            MC motorC = new MC();
+            Vehicle motorC = new MC();
             //Act
-            var actualPrice = motorC.Price();
+            var actualPrice = motorC.Price(125,false);
             double expectedPrice = 125;
             //Assert
             Assert.AreEqual(expectedPrice, actualPrice);
@@ -25,12 +25,13 @@ namespace UnitTestTicketSystem
         public void VehicleTypeTest()
         {
             //Arrange
-            MC motorC = new MC();
+            Vehicle motorC = new MC();
             //Act
             var actualOutput = motorC.VehicleType();
             string expectedOutput = "MC";
             //Assert
             Assert.AreEqual(expectedOutput, actualOutput);
         }
+
     }
 }

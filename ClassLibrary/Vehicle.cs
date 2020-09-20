@@ -21,10 +21,19 @@ namespace ClassLibrary
         public DateTime Date { get; set; }
 
         /// <summary>
-        /// A method that returns the price of the ticket. It takes no parameters.
+        /// A method that returns the price of the ticket. Takes 2 parameters, the basic price of the ticket
+        /// and a boolen value if brobizz was used or not.
         /// </summary>
         /// <returns>a double value, the price of the ticket.</returns>
-        public abstract double Price();
+        public double Price(double ticketPrice, bool brobizz)
+        {
+            if (brobizz==true)
+            {
+                return Math.Round(ticketPrice * 0.95,2);
+            }
+
+            return ticketPrice;
+        }
         /// <summary>
         /// A method that returns the type of the vehicle. It takes no parameters.
         /// </summary>

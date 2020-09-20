@@ -7,14 +7,16 @@ namespace UnitTestTicketSystem
     [TestClass]
     public class CarTests
     {
-        [TestMethod]
-        public void PriceTest()
+        [DataTestMethod]
+        [DataRow(228,240,true)]
+        [DataRow(300, 300, false)]
+        [DataRow(475, 500, true)]
+        public void PriceTest(double expectedPrice, double defaultPrice, bool brobizz)
         {
             //Arrange
-            Car car = new Car();
+            Vehicle car = new Car();
             //Act
-            var actualPrice = car.Price();
-            double expectedPrice = 240;
+            var actualPrice = car.Price(defaultPrice,brobizz);
             //Assert
             Assert.AreEqual(expectedPrice, actualPrice);
         }
@@ -23,7 +25,7 @@ namespace UnitTestTicketSystem
         public void VehicleTypeTest()
         {
             //Arrange
-            Car car = new Car();
+            Vehicle car = new Car();
             //Act
             var actualOutput = car.VehicleType();
             string expectedOutput = "Car";
