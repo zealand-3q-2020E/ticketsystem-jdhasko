@@ -29,6 +29,29 @@ namespace ClassLibrary
         /// A method that returns the type of the vehicle. It takes no parameters.
         /// </summary>
         /// <returns>a string value, the type of the vehicle. </returns>
-        public abstract string VehicleType();   
+        public abstract string VehicleType();
+
+        /// <summary>
+        /// Method that checks the length of the License Plate
+        /// </summary>
+        /// <param name="insertedLicensePlate"></param>
+        /// <returns>Returns a true value if the license plate is correct.</returns>
+        public virtual bool CheckLicensePlateLength(string insertedLicensePlate)
+        {
+            if (insertedLicensePlate.Length >7)
+            {
+                throw new ArgumentException("The inserted License Plate is too long.");
+            }
+
+            else if (insertedLicensePlate.Length>3)
+            {
+                return true;
+
+            }
+            throw new ArgumentException("The inserted License Plate is too short.");
+
+
+
+        }
     }
 }
