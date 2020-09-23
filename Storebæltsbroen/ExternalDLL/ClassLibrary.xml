@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ClassLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:ClassLibrary.Car">
+            <summary>
+            This class represents a car. It has a LicensePlate and a Date property.
+            It contains two methods. Price, and VehicleType.
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.Car.Price">
+            <summary>
+            A method that returns the price of the ticket. It takes no parameters. Declared in the parent class: Vehicle
+            </summary>
+            <returns>a double value, the price of the ticket.</returns>
+        </member>
+        <member name="M:ClassLibrary.Car.VehicleType">
+            <summary>
+            A method that returns the type of the vehicle. It takes no parameters. Declared in the parent class: Vehicle;
+            </summary>
+            <returns>a string value, the type of the vehicle. </returns>
+        </member>
+        <member name="T:ClassLibrary.MC">
+            <summary>
+            This class represents a MotorCycle. It has a LicencePlate and a Date property and a Price and a Type method.
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.MC.Price">
+            <summary>
+            A method that returns the price of the ticket. It takes no parameters.
+            </summary>
+            <returns>a double value, the price of the ticket.</returns>
+        </member>
+        <member name="M:ClassLibrary.MC.VehicleType">
+            <summary>
+            A method that returns the type of the vehicle. It takes no parameters.
+            </summary>
+            <returns>a string value, the type of the vehicle. </returns>
+        </member>
+        <member name="T:ClassLibrary.Vehicle">
+            <summary>
+            A base class for all the vehicles.
+            It contains 2 properties, LicensePlate and Date.
+            It also contains 2 methods that must be implemented in the child classes: Price and VehicleType.
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.Vehicle.LicensePlate">
+            <summary>
+            The license plate of the vehicle.
+            </summary>
+        </member>
+        <member name="P:ClassLibrary.Vehicle.Date">
+            <summary>
+            Date of passing the bridge.
+            </summary>
+        </member>
+        <member name="M:ClassLibrary.Vehicle.Price">
+            <summary>
+            A method that returns the price of the ticket. Takes no paramaters.
+            </summary>
+            <returns>a double value, the price of the ticket.</returns>
+        </member>
+        <member name="M:ClassLibrary.Vehicle.VehicleType">
+            <summary>
+            A method that returns the type of the vehicle. It takes no parameters.
+            </summary>
+            <returns>a string value, the type of the vehicle. </returns>
+        </member>
+        <member name="M:ClassLibrary.Vehicle.CheckLicensePlateLength(System.String)">
+            <summary>
+            Method that checks the length of the License Plate
+            </summary>
+            <param name="insertedLicensePlate"></param>
+            <returns>Returns a true value if the license plate is correct.</returns>
+        </member>
+        <member name="M:ClassLibrary.Vehicle.CheckBroBizzDiscount(System.Double,System.Boolean)">
+            <summary>
+            Method that checks if it's possible to give BroBizzDiscount.
+            if it is returns the discounted price
+            </summary>
+            <param name="defaultPrice"></param>
+            <param name="brobizz"></param>
+            <returns>returns a double value</returns>
+        </member>
+    </members>
+</doc>
